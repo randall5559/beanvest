@@ -1,0 +1,28 @@
+h2 {
+    margin: 0px;
+    font-size: 45px;
+    font-family: 'Avenir Next', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+.mat-slider-horizontal {
+    flex-basis: 90%;
+}
+
+.rate-wrapper {
+    margin-bottom: 30px;
+}
+
+/* ----------- Laptop Screens ----------- */
+@media only screen and (min-width : 1100px) {
+
+    .mat-slider-horizontal {
+        flex-basis: 70%;
+    }
+
+    .rate-block {
+        width: 70%;
+    }
+
+}

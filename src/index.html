@@ -1,14 +1,70 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
   <title>Beanvest</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="assets/manifest.json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" , content="Beanvest Early Access">
+
+  <style>
+    #loader {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .loader-inner.color {
+      display: flex;
+      margin: auto 0;
+      top: 14px;
+      position: relative;
+    }
+
+    .loader-inner.color>div {
+      background-color: #FFC107;
+    }
+
+    #loader>img {
+      width: 4em;
+      padding: 0px 3px;
+    }
+  </style>
+
 </head>
+
 <body>
-  <app-root></app-root>
+  <bv-root>
+    <div id="loader">
+      <div class="loader-inner line-scale-pulse-out color">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img src="./assets/img/bean-logo.svg">
+      <div class="loader-inner line-scale-pulse-out color">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </bv-root>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124366263-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124366263-1');
+  </script>
 </body>
+
 </html>

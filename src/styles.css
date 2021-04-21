@@ -1,1 +1,213 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+ * Default Global Styles
+ **/
+html, body {
+    margin: 0;
+    width: 100%;
+    padding-top: 40px;
+}
+
+h1, h2, h4, h6, p {
+    color: #4A4A4A;
+    margin: 0;
+    font-family: 'Avenir Next', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+input,
+mat-form-field,
+button,
+div,
+label
+span {
+    font-family: 'Avenir Next', Arial, Helvetica, sans-serif !important;
+}
+
+h1 {
+    font-size: 45px;
+    padding: 10px;
+    padding: 0 5px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    color: white;
+    font-size: 30px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+
+
+
+/**
+ * Beanvest Global Custom Styles
+ **/
+.bv-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.bv-sticky + .content {
+    padding-top: 102px;
+}
+
+.bv-full-width {
+    width: 100% !important;
+}
+
+.bv-full-height {
+    height: 100%;
+}
+
+.bv-right {
+    position: absolute !important;
+    right: 5px;
+}
+
+.bv-width-95 {
+    width: 95% !important;
+}
+
+.bv-padding-10 {
+    padding: 10px !important;
+}
+
+.bv-padding-20 {
+    padding: 20px !important;
+}
+
+.bv-padding-40 {
+    padding: 40px !important;
+}
+
+.bv-margin-top-20 {
+    margin-top: 20px !important;
+}
+
+.bv-button {
+    border-radius: 20px !important;
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    max-height: 70px;
+    width: 50%;
+    margin: 0 40px;
+}
+
+.bv-block {
+    margin: 30px 10px;
+}
+
+.bv-inner-block {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.bv-img-max {
+    max-width: 450px;
+    align-self: center;
+}
+
+
+/* ----------- Laptop Screens ----------- */
+@media only screen and (min-width : 1025px) {
+
+    .bv-flex-1 {
+        flex: 1;
+    }
+    
+    .bv-flex-2 {
+        flex: 2;
+    }
+
+    .bv-flex-left {
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .bv-button {
+        width: auto;
+        margin: 0;
+    }
+
+    .bv-nav-max-width {
+        max-width: 1200px;
+    }
+
+    .bv-block {
+        width: 100%;
+        display: flex;
+        min-height: 400px;
+        margin: 30px 10px;
+    }
+
+    .bv-inner-block {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bv-img-scale {
+        transform: scale(1.3);
+    }
+
+    .bv-flex-col {
+        flex-direction: column;
+    }
+
+    .bv-left-percent-15 {
+        position: relative;
+        left: 15%;
+    }
+
+    .bv-margin-left-50 {
+        margin-left: 50px !important;
+    }
+
+    .bv-margin-top-75 {
+        margin-top: 75px !important;
+    }
+
+    .bv-margin-bottom-80 {
+        margin-bottom: 80px !important;
+    }
+
+    .bv-margin-right-100 {
+        margin-right: 100px !important;
+    }
+
+    .bv-left-25 {
+        position: relative;
+        left: 25px;
+    }
+
+    .bv-left-100 {
+        position: relative;
+        left: 100px;
+    }
+
+    .bv-right-50 {
+        position: relative;
+        right: 50px;
+    }
+}

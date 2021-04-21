@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+
+// override font-family styles
+$bv-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(12px, 20px, 500)
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($bv-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$bv-app-primary: mat-palette($mat-amber);
+$bv-app-accent:  mat-palette($mat-teal, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$bv-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$bv-app-theme: mat-light-theme($bv-app-primary, $bv-app-accent, $bv-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($bv-app-theme);
+
+
+// Beanvest custom SASS colors
+$primary-color-dark:   #00796B;
+$primary-color:        #21CE99;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FFC107;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$primary-second-color: #4A4A4A;
+$divider-color:        #BDBDBD;
+
+
+.bv-bg-color {
+  background-color: $primary-color !important;
+}
+
+.bv-white-bg {
+  background: #FFF !important;
+}
+
+.bv-black-bg {
+  background-color: #000 !important;
+}
+
+.bv-text-color {
+  color: $primary-color !important;
+}
+
+.bv-text-white-color {
+  color: $primary-color-text !important;
+}
+
+.bv-amber-color {
+  color: $accent-color !important;
+}
+
+.bv-text-dark-color {
+  color: $primary-second-color;
+}
+
+.bv-link {
+  font-size: 16px;
+  cursor: pointer;
+  color: $secondary-text-color;
+  font-weight: lighter;
+}
+
+.bv-link:hover {
+  color: $primary-text-color;
+}
+

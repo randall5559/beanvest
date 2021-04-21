@@ -1,0 +1,30 @@
+<div class="bv-fix-header">
+  <mat-toolbar class="sticky bv-white-bg bv-nav-max-width">
+    <img src="assets/img/bean-logo.svg" />
+    <h1><span class="bv-text-color">Bean</span><span class="bv-amber-color">vest</span></h1>
+    <span class="bv-flex-1 xs-hide sm-hide md-hide"></span>
+    <div class="flex xs-hide sm-hide md-hide">
+      <a href="#how-it-works" class="bv-link text-decoration-none">How It Works!</a>
+      <a href="#how-it-works" class="bv-link text-decoration-none">Support</a>
+      <a href="#how-it-works" class="bv-link text-decoration-none">Login</a>
+      <a href="#how-it-works" class="bv-link text-decoration-none bold bv-text-color">Sign Up</a>
+    </div>
+    <button class="bv-right lg-hide bv-text-color" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>view_list</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="false">
+      <button mat-menu-item>
+        <span class="bv-amber-color">How It Works!</span>
+      </button>
+      <button mat-menu-item>
+        <span class="bv-amber-color">Support</span>
+      </button>
+      <button mat-menu-item>
+        <span class="bv-amber-color">Login</span>
+      </button>
+      <button mat-menu-item>
+        <span class="bv-amber-color">Sign Up</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+</div>

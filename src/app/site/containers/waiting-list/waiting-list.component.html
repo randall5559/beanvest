@@ -1,0 +1,127 @@
+<main class="flex flex-column flex-wrap">
+
+  <!-- Banner Section  -->
+  <div class="height-500 flex justify-center mb0">
+    <div class="bv-flex-1 bv-full-height flex self-center justify-center">
+      <img class="give xs-hide sm-hide md-hide" src="assets/img/give-money.svg" />
+    </div>
+    <div class="bv-flex-2 bv-full-height flex relative flex-column justify-center self-center">
+        <h1 class="bv-text-color">Invest without the risk</h1>
+        <h6>We take the risk so you don’t have to</h6>
+        <div class="flex justify-center flex-wrap p2 pb3">
+          <form class="bv-flex-1 bv-full-width self-center mb0 py1 px2" (ngSubmit)="addEmail()">
+            <mat-form-field class="bv-full-width">
+              <input matInput placeholder="Enter Email Address" [formControl]="emailFormControl">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required') && !emailAlreadyExist">
+                Email is <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf="emailAlreadyExist">
+                Email already exist
+              </mat-error>
+            </mat-form-field>
+          </form>
+          <button type="submit" class="bv-button" mat-flat-button color="primary" (click)="addEmail()">
+            Get Earlier Access
+          </button>
+        </div>
+        <a href="#video-sec" class="scroll-down-btn" mat-fab color="primary">
+          <mat-icon>arrow_downward</mat-icon>
+        </a>
+    </div>
+    <div class="bv-flex-1 bv-full-height flex justify-center self-center">
+      <img class="receive xs-hide sm-hide md-hide" src="assets/img/recieve-money.svg" />
+    </div>
+  </div>
+
+  <!-- Bullet Point Section -->
+  <div class="bv-flex-1 bv-bg-color flex">
+    <div class="bv-flex-1 flex xs-hide sm-hide md-hide">
+        <mat-list role="list">
+          <mat-list-item role="listitem">
+            <h3><strong>&middot;</strong> It only takes a couple beans to get started</h3>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <h3><strong>&middot;</strong> No risk of loss on your Initial Investment</h3>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <h3><strong>&middot;</strong> Invest to get want you need now not later</h3>
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <h3><strong>&middot;</strong> Short terms, big rewards</h3>
+          </mat-list-item>
+        </mat-list>
+    </div>
+    <div id="video-sec" class="bv-flex-1 bv-full-width flex flex-column justify-center p1">
+      <div class="video-title">Watch and learn!</div>
+      <video controls
+        muted
+        src="https://firebasestorage.googleapis.com/v0/b/beanvest.appspot.com/o/beanvest.mp4?alt=media&token=1967c5bc-a536-4ea6-83ab-89a54c4e057e"
+      >
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+  </div>
+
+  <!-- How It Works Section -->
+  <div id="how-it-works" class="px2 py3" [ngStyle]="{'background-image': 'url(\'assets/img/growth.svg\')' }">
+    <h2 class="bv-text-color">How it works</h2>
+    <p>Beanvest deals with top-notch stocks that go through rigorous testing.
+      <br />Here are some of the strict entry and exit criteria.</p>
+    <ul class="h2">
+      <li class="m3"><strong>Uptrend</strong> or overall stock direction is upward for 1 to 5 years.</li>
+      <li class="m3"><strong>Low Volatility</strong>, meaning the stocks we deal with do not fluctuate dramatically, and tend to be more steady.</li>
+      <li class="m3"><strong>Positioning:</strong> "Buy low, sell high" Although it is very simple, it is difficult to execute.
+          At Beanvest we strategically place positions on stocks to maximize gains and minimize losses.</li>
+      <li class="m3"><strong>Cover System</strong> strategy to insure you'll never lose your initial investment.</li>
+    </ul>
+  </div>
+
+  <div id="how-to-start" class="px2 py3">
+    <h2 class="bv-text-color">How to get started</h2>
+    <div class="center">(Submit your email at the top and we'll let you know when Beanvest beta is ready.)</div>
+    <ol class="h2">
+      <li class="m3">Open a <strong>Beanvest Account</strong> with as little as $1,000 <small>(maximum you can invest is $5,000 at a time).</small></li>
+      <li class="m3">Choose your goal(s) Example: <strong>'Saving For Christmas or Planning a Vacation'.</strong></li>
+      <li class="m3">Choose how long you want to invest your money <small>(minimum 4 months).</small></li>
+      <li class="m3">Let your money go to work within your choosen time period.</li>
+      <li class="m3">Reach your goal before your period ends, then <strong>Cash Out</strong> sooner
+        <small>(must be at least 3 months before cash out can be initiated).</small></li>
+    </ol>
+  </div>
+
+  <!-- Rate Comparison Section -->
+  <div id="rate-comparison" class="px3 pt3">
+    <h2 class="bv-text-color">See why we’re the better choice</h2>
+    <div class="center">Banks just don’t compare.</div>
+    <bv-rate-compare [defaultValue]="cashVal" min="1000" max="5000" (value)="onSlide($event)">
+      <bv-rate-block
+        *ngFor="let block of rateBlocks"
+        [value]="cashVal"
+        [isLargeTitle]="block.isLargeTitle"
+        [title]="block.title"
+        [percent]="block.percent"
+        [width]="block.width"
+        [bgColor]="block.bgColor"
+        [percentColor]="block.percentColor"
+        [amountColor]="block.amountColor"
+        class="rate-block">
+      </bv-rate-block>
+    </bv-rate-compare>
+    <div class="center bold">Estimated 1 year rate.</div>
+  </div>
+
+  <div class="px2 pb2">
+      <div class="center">Beanvest does not make any guarantees on percent/cash rate of returns from investments.</div>
+  </div>
+
+  <div class="bv-bg-color flex p2">
+    <div class="bv-flex-1 flex flex-column justify-center">
+        <h6 class="bv-text-white-color">Have questions? Contact us at
+          <a class="bv-text-white-color" href="mailto:info@beanvest.com">info@beanvest.com</a>
+        </h6>
+    </div>
+  </div>
+</main>

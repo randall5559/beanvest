@@ -1,0 +1,55 @@
+h1 {
+    margin: 0 5px;
+    font-family: 'Avenir Next';
+    font-size: 25px;
+}
+
+a {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 300;
+}
+
+a:hover {
+    color: #FFC107 !important;
+}
+
+.bv-fix-header {
+    display: flex;
+    justify-content: center;
+    background-color: #FFF;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+}
+
+.mat-toolbar {
+    background-color: transparent !important;
+    justify-content: center;
+}
+
+.bv-link {
+    font-size: 16px;
+    cursor: pointer;
+    color: #757575;
+    font-weight: lighter;
+}
+
+/* ----------- Laptop Screens ----------- */
+@media only screen and (min-width : 1025px) {
+    a {
+        margin: 0 20px;
+    }
+
+    .bv-fix-header {
+        height: 65px;
+    }
+
+    .mat-toolbar {
+        justify-content: flex-start;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+}

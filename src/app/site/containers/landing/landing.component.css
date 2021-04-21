@@ -1,0 +1,28 @@
+.rate-block {
+    text-align: left !important;
+}
+
+/* ----------- Laptop Screens ----------- */
+@media only screen and (min-width : 1025px) {
+
+    h1 {
+        font-size: 70px;
+        padding: 0;
+        max-width: 450px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 500px;
+        text-align: left;
+        line-height: 2.5;
+    }
+
+    button {
+        width: 50%;
+    }
+}

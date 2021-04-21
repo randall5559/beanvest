@@ -1,0 +1,13 @@
+<ng-container>
+  <span [ngClass]="{ 'h2' : isLargeTitle }">{{ title }}</span>
+  <div class="rate-percent-gain-block">
+    <span
+      class="rate-percent p1"
+      [style.width]="width"
+      [style.backgroundColor]="bgColor"
+      [style.color]="percentColor">
+      {{ percent }}%
+    </span>
+    <span class="p1" [style.color]="amountColor">${{ value * (percent/100) | number:'1.0-0' }}</span>
+  </div>
+</ng-container>

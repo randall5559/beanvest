@@ -1,0 +1,78 @@
+<div class="flex flex-wrap center">
+  <div class="bv-block bv-full-width bv-margin-bottom-80">
+    <div class="lg-hide flex bv-flex-center">
+      <img class="bv-width-95 bv-img-max mx-auto" src="assets/img/beanvest-phone-image.png" />
+    </div>
+    <div class="bv-inner-block">
+      <h1 class="bv-text-color">Invest without the risk</h1>
+      <p>We take the risk so you don’t have to.</p>
+      <button type="submit" class="bv-button bv-margin-top-20 bv-padding-10" mat-flat-button color="primary">
+          Sign Up
+      </button>
+    </div>
+    <div class="bv-inner-block xs-hide sm-hide md-hide">
+      <img class="bv-margin-top-75 bv-right-50" src="assets/img/beanvest-phone-image.png" />
+    </div>
+  </div>
+
+  <div class="bv-block">
+    <div class="bv-inner-block">
+        <img class="bv-img-scale" src="assets/img/money-bag.svg" />
+    </div>
+    <div class="bv-inner-block">
+      <h2 class="bv-text-dark-color bv-flex-left bv-left-25">Hold on to what’s your’s</h2>
+      <p class="bv-flex-left bv-left-25">At Beanvest we believe you should enjoy the benefits of investing in the stock market
+        without the risk of losing all you saved and worked hard for.</p>
+    </div>
+  </div>
+
+  <div class="bv-block bv-margin-bottom-80">
+    <div class="bv-inner-block lg-hide">
+        <img class="bv-img-scale" src="assets/img/handyman-tools.svg" />
+    </div>
+    <div class="bv-inner-block">
+      <h2 class="bv-text-dark-color bv-flex-left bv-left-percent-15">Put your money to work</h2>
+      <p class="bv-flex-left bv-left-percent-15">Don’t just let your money sit in a low interest savings.
+        Put your money with us and start letting it work for you.
+          Two incomes are better then one.</p>
+    </div>
+    <div class="bv-inner-block xs-hide sm-hide md-hide ">
+        <img class="bv-img-scale" src="assets/img/handyman-tools.svg" />
+    </div>
+  </div>
+
+  <div class="bv-block">
+      <div class="bv-inner-block">
+          <img class="bv-img-scale" src="assets/img/bank-building.svg" />
+      </div>
+      <div class="bv-inner-block">
+        <h2 class="bv-text-dark-color bv-flex-left bv-left-25">Never fear a Broker again</h2>
+        <p class="bv-flex-left bv-left-25">At Beanvest we come alongside your Investment Broker(s) and
+          shield you from all the pains and aches that comes with investing.</p>
+      </div>
+    </div>
+
+  <div class="bv-block bv-full-width bv-flex-col">
+    <div class="bv-inner-block">
+      <h2 class="bv-text-color">See why we’re the better choice</h2>
+      <p>Banks just don’t compare.</p>
+    </div>
+    <bv-rate-compare [defaultValue]="cashVal" min="1000" max="5000" (value)="onSlide($event)">
+      <bv-rate-block
+        *ngFor="let block of rateBlocks"
+        [value]="cashVal"
+        [isLargeTitle]="block.isLargeTitle"
+        [title]="block.title"
+        [percent]="block.percent"
+        [width]="block.width"
+        [bgColor]="block.bgColor"
+        [percentColor]="block.percentColor"
+        [amountColor]="block.amountColor"
+        class="rate-block">
+      </bv-rate-block>
+    </bv-rate-compare>
+    <div class="foot-note"><strong>Estimated 1 year rate.</strong><br/>
+        Beanvest does not make any guarantees on percent/cash rate of returns from investments.
+    </div>
+  </div>
+</div>

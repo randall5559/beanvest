@@ -1,0 +1,18 @@
+<div class="rate-wrapper">
+  <div class="bv-flex-1 flex justify-center">
+    <mat-slider
+      color="primary"
+      step="100"
+      [value]="cashValue"
+      [max]="max"
+      [min]="min"
+      (input)="onMove($event)">
+    </mat-slider>
+  </div>
+  <div class="bv-flex-1 flex justify-center">
+    <h2 class="bv-amber-color">${{ cashValue }}</h2>
+  </div>
+  <div class="bv-flex-1 flex flex-column justify-center">
+    <ng-content></ng-content>
+  </div>
+</div>

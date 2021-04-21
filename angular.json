@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "bv",
       "schematics": {},
       "architect": {
         "build": {
@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/material.scss",
+              "node_modules/loaders.css/loaders.min.css",
+              "node_modules/basscss/css/basscss-cp.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -40,10 +45,20 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
+              "aot": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": false,
+              "serviceWorker": true
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "aot": false
             }
           }
         },
@@ -55,6 +70,9 @@
           "configurations": {
             "production": {
               "browserTarget": "beanvest:build:production"
+            },
+            "development": {
+              "browserTarget": "beanvest:build:development"
             }
           }
         },
@@ -123,5 +141,13 @@
       }
     }
   },
-  "defaultProject": "beanvest"
+  "defaultProject": "beanvest",
+  "cli": {
+    "defaultCollection": "akita-schematics"
+  },
+  "schematics": {
+    "akita-schematics:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,0 +1,28 @@
+.rate-block {
+    align-self: center;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.rate-percent {
+    width: 70%;
+    height: 20px;
+    background-color: #ccc;
+}
+
+.rate-percent-gain-block {
+    display: flex;
+}
+
+/* ----------- Laptop Screens ----------- */
+@media only screen and (min-width : 1100px) {
+
+    .mat-slider-horizontal {
+        flex-basis: 70%;
+    }
+
+    .rate-block {
+        width: 70%;
+    }
+
+}
